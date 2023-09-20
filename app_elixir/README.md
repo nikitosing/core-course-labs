@@ -1,4 +1,6 @@
 # Lab1
+![workflow](https://github.com/nikitosing/core-course-labs/actions/workflows/elixir.yml/badge.svg)
+
 
 Lab1 DevOps course [F23]
 
@@ -10,6 +12,7 @@ Lab1 DevOps course [F23]
   - [Installation](#installation)
 - [Usage](#usage)
 - [Docker](#docker)
+- [Tests](#tests)
 
 ## Project Overview
 
@@ -77,11 +80,19 @@ $ docker build -t app_elixir .
 ### Run built image
 
 ```bash
-$ docker run -p 4000:4000 -e SECRET_KEY_BASE='WPcE2F5vjA5X3XBE+QcK7OHMiAuPovP4e62Gsl0VFxRHvu+xS2AiQWY0H3Qz6Q3O' app_elixir  
+$ docker run -p 4000:4000 -e SECRET_KEY_BASE='WPcE2F5vjA5X3XBE+QcK7OHMiAuPovP4e62Gsl0VFxRHvu+xS2AiQWY0H3Qz6Q3O' app_elixir
 ```
 
 ### Pull the image
 
 ```bash
 $ docker pull nikitosing/app_elixir
+```
+
+## Tests
+
+To run tests:
+
+```bash
+$ mix tets
 ```
